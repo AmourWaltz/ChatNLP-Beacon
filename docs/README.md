@@ -1,7 +1,9 @@
 # 深入理解 Pattern Recognition and Machine Learning
 
 </br>
-&emsp;&emsp;本项目是作者以 Bishop 的《Pattern Recognition and Machine Learning》为主，其他机器学习相关资料为辅，按照自己的学习路线，对模式识别和机器学习知识点做出的系统性总结概括，也是基于我个人理解对 PRML 导读性的学习笔记和教程。
+
+&emsp;&emsp;本项目是作者以 Bishop 的《Pattern Recognition and Machine Learning》为主，其他机器学习相关资料为辅，
+按照自己的学习路线，对模式识别和机器学习知识点做出的系统性总结概括，也是基于我个人理解对 PRML 导读性的学习笔记和教程。
 
 &emsp;&emsp;作者本人是一名在读博士研究生，研究方向为自然语言语音的处理，本科期间就对机器学习相关领域的研究神往已久，后来机缘巧合下选择了语言模型，语音识别等作为博士研究课题。我坚持认为对机器学习基础知识的掌握决定了个人的科研成就上限，正所谓水之积也不厚，则其负大舟也无力。
 于是我选择了有着机器学习领域圣经之称的 Bishop 的《Pattern Recognition and Machine Learning》，作为主要学习参考资料，并在知乎长期进行学习笔记的专栏写作。
