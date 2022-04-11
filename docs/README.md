@@ -67,7 +67,7 @@
 &emsp;&emsp;项目主要以 PRML 为根据，但由于该书成书较久，很多知识点近年的发展未能充分涵盖，尤其是在一些机器学习模型基础上发展的深度学习模型，因此我也参考了 Bengio《Deep Learning》花书以及周志华老师《机器学习》西瓜书的相关部分作为扩充，引入近些年炙手可热的深度学习方法，为 PRML 注入一些新鲜血液。
 
 <div align=center>
-<img src="images/prml.png" width="90%"/>
+<img src="images/prml.png" width="85%"/>
 </div>
 
 > **① Pattern Recognition and Machine Learning &emsp; 作者：Christopher M. Bishop** <br />
@@ -84,12 +84,14 @@
   <tr>
     <th>成员</th>
     <th>简介</th>
+    <th>主页</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://amourwaltz.github.io">薛博阳</a></span></td>
     <td><span style="font-weight:normal;font-style:normal;text-decoration:none">项目负责人，香港中文大学博士在读 </td>
+    <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://github.com/AmourWaltz">Github</a>, <a href="https://www.zhihu.com/people/yi-ran-chao-shi-dai">知乎</a> </td>
   </tr>
 </tbody>
 </table>
