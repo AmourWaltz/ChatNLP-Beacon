@@ -3,21 +3,19 @@
 
 &emsp;&emsp;**<font size=4><a href="https://amourwaltz.github.io/Dive-into-PRML/#/">在线阅读</a></font>**
 
-&emsp;&emsp;本项目是作者以 Bishop 的《Pattern Recognition and Machine Learning》为主，其他机器学习相关资料为辅，按照自己的学习路线，对模式识别和机器学习知识点做出的系统性总结概括，也是基于我个人理解对 PRML 导读性的学习笔记和教程。
+&emsp;&emsp;本项目是基于 Bishop 的《Pattern Recognition and Machine Learning》（以下简称 PRML）的学习笔记和导读教程，也是作者学习期间对模式识别、机器学习作出的系统性的总结资料。
 
-&emsp;&emsp;作者本人是一名在读博士研究生，研究方向为自然语言语音的处理，本科期间就对机器学习相关领域的研究神往已久，后来机缘巧合下选择了语言模型，语音识别等作为博士研究课题。我坚持认为对机器学习基础知识的掌握决定了个人的科研成就上限，正所谓水之积也不厚，则其负大舟也无力。
-于是我选择了有着机器学习领域圣经之称的 Bishop 的《Pattern Recognition and Machine Learning》，作为主要学习参考资料，并在知乎长期进行学习笔记的专栏写作。
-后来了解到 Datawhale，发现组织的开源思想与自己不谋而合，逐渐萌生了把这些笔记整理并完善成为一个开源项目的想法。
+&emsp;&emsp;机器学习是当下最热门的方向之一，很多从事相关工作研究的伙伴都希望能在该领域更进一步，而对基础知识的掌握程度往往决定了个人能企及的成就上限，正所谓水之积也不厚，则其负大舟也无力。于是我选择了素有机器学习领域“圣经”之称的 Bishop 的 PRML 作为主要资料，并坚持进行学习笔记的写作整理，后来逐渐决定做一个基于 PRML 的开源项目。
+本项目取名 Dive into PRML，旨在以一个初学者的角度，深入浅出，构建系统性的知识框架，再深入探讨每章的细节难点，把我的学习笔记和心路历程总结分享给大家，期待能遇到更多志同道合的伙伴共同进步。
 
-&emsp;&emsp;PRML 阅读难度较大，令很多有志于从事机器学习工作研究的伙伴望而却步。本项目取名 Dive into PRML，旨在以一个初学者的角度，深入浅出，在宏观的知识体系基础上，再行深入探讨细节难点，把我在学习这本书及其他机器学习知识的心路历程和笔记总结分享给大家，与更多志同道合的伙伴交流进步。
-项目先以 PRML 导读性教程的形式呈现，而后精益求精，结合其他资料融会贯通，最终希望能自成一家，止于至善，作为我博士生涯的一项重要成果而收官。
-行远自迩，笃行不怠，希望自己能把这份初心躬行到底，也希望能为中国开源事业贡献绵薄之力。
+&emsp;&emsp;项目计划分为试行版，完整版，发行版三个版本，具体可参见[项目实施](./preface/experience.md)，先以 PRML 学习笔记的形式呈现，而后精益求精，结合其他资料融会贯通，自成体系，做出一份完整的解读教程，作为我学术生涯的一项重要成果而收官。
+行远自迩，笃行不怠，希望自己能把这份初心坚持到底，有所建树，同时也能为中国开源事业贡献绵薄之力。
 
 ## 参考目录
 
 * **<font size=4>前言 Preface</font>**
     * [写作初衷 Original Intention](./preface/intention.md)
-    * [预期目标 Expected Targets](./preface/experience.md)
+    * [项目实施 Project Implementation](./preface/experience.md)
 
 * **<font size=4>基础篇 Basis</font>**
     * [1 线性回归 Linear Regression](./ch1_linear_regression/README.md)
@@ -69,7 +67,7 @@
 &emsp;&emsp;项目主要以 PRML 为根据，但由于该书成书较久，很多知识点近年的发展未能充分涵盖，尤其是在一些机器学习模型基础上发展的深度学习模型，因此我也参考了 Bengio《Deep Learning》花书以及周志华老师《机器学习》西瓜书的相关部分作为扩充，引入近些年炙手可热的深度学习方法，为 PRML 注入一些新鲜血液。
 
 <div align=center>
-<img src="images/prml.png" width="90%"/>
+<img src="images/prml.png" width="85%"/>
 </div>
 
 > **① Pattern Recognition and Machine Learning &emsp; 作者：Christopher M. Bishop** <br />
@@ -86,12 +84,14 @@
   <tr>
     <th>成员</th>
     <th>简介</th>
+    <th>主页</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://amourwaltz.github.io">薛博阳</a></span></td>
     <td><span style="font-weight:normal;font-style:normal;text-decoration:none">项目负责人，香港中文大学博士在读 </td>
+    <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://github.com/AmourWaltz">Github</a>, <a href="https://www.zhihu.com/people/yi-ran-chao-shi-dai">知乎</a> </td>
   </tr>
 </tbody>
 </table>

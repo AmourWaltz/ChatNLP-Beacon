@@ -1,7 +1,7 @@
 
 * **前言 Preface**
     * [写作初衷 Original Intention](./preface/intention.md)
-    * [预期目标 Expected Targets](./preface/experience.md)
+    * [项目实施 Project Implementation](./preface/experience.md)
 * **基础篇 Basis**
     * [1 线性回归 Linear Regression](./ch1_linear_regression/README.md)
         <!-- * [1.1 多项式拟合 Polynomial Fitting](./ch1_linear_regression/1.1_polynomial_fitting.md)
