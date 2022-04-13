@@ -1,7 +1,7 @@
 # 深入理解 Pattern Recognition and Machine Learning
 </br>
 
-&emsp;&emsp;本项目是基于 Bishop 的《Pattern Recognition and Machine Learning》（以下简称 PRML）的学习笔记和导读教程，也是作者学习期间对模式识别、机器学习作出的系统性的总结资料。
+&emsp;&emsp;本项目是基于 Bishop 的《Pattern Recognition and Machine Learning》（以下简称 PRML）的学习笔记和导读教程，也是作者学习过程中对模式识别、机器学习作出的系统性总结资料。
 
 &emsp;&emsp;机器学习是当下最热门的方向之一，很多从事相关工作研究的伙伴都希望能在该领域更进一步，而对基础知识的掌握程度往往决定了个人能企及的成就上限，正所谓水之积也不厚，则其负大舟也无力。于是我选择了素有机器学习领域“圣经”之称的 Bishop 的 PRML 作为主要资料，并坚持进行学习笔记的写作整理，后来逐渐决定做一个基于 PRML 的开源项目。
 本项目取名 Dive into PRML，旨在以一个初学者的角度，深入浅出，构建系统性的知识框架，再深入探讨每章的细节难点，把我的学习笔记和心路历程总结分享给大家，期待能遇到更多志同道合的伙伴共同进步。
