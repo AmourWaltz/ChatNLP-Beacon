@@ -77,6 +77,8 @@
 
 ## 贡献名单
 
+</br>
+
 <table align="center" style="width:90%;">
 <thead>
   <tr>
@@ -94,7 +96,10 @@
 </tbody>
 </table>
 
+&emsp;&emsp;由于项目规划工程量较大，时间线预计较久，我平日精力能力有限，非常期望能遇到对此项目以及 PRML 感兴趣或者正在学习的伙伴，希望你能参与部分章节的编辑，或对完成的内容进行检查斧正，或对项目提出合理建议，有意者欢迎联系。
+
 ## 关注我们
+
 <div align=center>
 <p>扫描下方二维码关注公众号：Datawhale</p>
 <img src="images/qrcode.jpeg" width = "180" height = "180">
