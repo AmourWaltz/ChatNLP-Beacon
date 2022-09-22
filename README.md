@@ -1,7 +1,5 @@
 # 深入理解 Pattern Recognition and Machine Learning
-
-
-&emsp;&emsp;**<font size=4><a href="https://amourwaltz.github.io/Dive-into-PRML/#/">在线阅读</a></font>**
+</br>
 
 &emsp;&emsp;本项目是基于 Bishop 的《Pattern Recognition and Machine Learning》（以下简称 PRML）的学习笔记和导读教程，也是作者学习过程中对模式识别、机器学习作出的系统性总结资料。
 
@@ -19,19 +17,18 @@
 
 * **<font size=4>基础篇 Basis</font>**
     * [1 线性回归 Linear Regression](./ch1_linear_regression/README.md)
-        * [1.1 多项式拟合 Polynomial Fitting](./ch1_linear_regression/1.1_polynomial_fitting.md)
-        * [1.2 线性基函数模型 Linear Basis Function Model](./ch1_linear_regression/1.2_linear_basis_function_model.md)
-        * [1.3 最大似然估计 Maximum Likelihoood Estimation](./ch1_linear_regression/1.3_maximum_likelihoood_estimation.md)
-        * [1.4 最小均方差 Minimum Square Error](./ch1_linear_regression/1.4_minimum_square_error.md)
-        * [1.5 梯度下降法 Gradient Desent](./ch1_linear_regression/1.5_gradient_desent.md)
-        * [1.6 解析法 Analytic Method](./ch1_linear_regression/1.6_analytic_method.md)
+        * [1.1 线性基函数模型 Linear Basis Function Model](./ch1_linear_regression/1.1_linear_basis_function_model.md) </br>
+        * [1.2 最大似然估计 Maximum Likelihoood Estimation](./ch1_linear_regression/1.2_maximum_likelihoood_estimation.md) </br>
+        * [1.3 最小均方差 Minimum Square Error](./ch1_linear_regression/1.3_minimum_square_error.md) </br>
+        * [1.4 梯度下降法 Gradient Desent](./ch1_linear_regression/1.4_gradient_desent.md) </br>
+        * [1.5 解析法 Analytic Method](./ch1_linear_regression/1.5_analytic_method.md) </br>
     * [2 线性分类 Linear Classification](./ch2_linear_classification/README.md)
-        * [2.1 线性判别分析 Linear Discriminate Analysis](./ch2_linear_classification/2.1_linear_discriminate_analysis.md)
-        * [2.2 Fisher分类器 Fisher Classifier](./ch2_linear_classification/2.2_fisher_classifier.md)
-        * [2.3 感知器算法 Perceptron Algorithm](./ch2_linear_classification/2.3_perceptron_algorithm.md)
-        * [2.4 判别式 Logistic 回归 Discrminate Logistic Regression](./ch2_linear_classification/2.4_discriminate_logistic_regression.md)
-        * [2.5 生成式 Logistic 回归 Generative Logistic Regression](./ch2_linear_classification/2.5_generative_logistic_regression.md)
-        * [2.6 广义线性模型 Generalized Linear Model](./ch2_linear_classification/2.6_generalized_linear_model.md)
+        * [2.1 线性判别分析 Linear Discriminate Analysis](./ch2_linear_classification/2.1_linear_discriminate_analysis.md) </br>
+        * [2.2 Fisher分类器 Fisher Classifier](./ch2_linear_classification/2.2_fisher_classifier.md) </br>
+        * [2.3 感知器算法 Perceptron Algorithm](./ch2_linear_classification/2.3_perceptron_algorithm.md) </br>
+        * [2.4 判别式 Logistic 回归 Discrminate Logistic Regression](./ch2_linear_classification/2.4_discriminate_logistic_regression.md) </br>
+        * [2.5 生成式 Logistic 回归 Generative Logistic Regression](./ch2_linear_classification/2.5_generative_logistic_regression.md) </br>
+        * [2.6 广义线性模型 Generalized Linear Model](./ch2_linear_classification/2.6_generalized_linear_model.md) </br>
     * [3 学习理论 Learning Theory](./ch3_learning_theory/README.md)
         * [3.1 过拟合 Overfitting](./ch3_learning_theory/3.1_overfitting.md)
         * [3.2 正则化 Regularization](./ch3_learning_theory/3.2_regularization.md)
