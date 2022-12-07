@@ -11,7 +11,7 @@ $$y({\boldsymbol x, \boldsymbol w})=w_0+w_1 {x}_1+w_2{x}_2+···+w_{\mathrm d}{
 
 ## 1.1 线性基函数模型 Linear Basis Function Model
 
-> 参考： PRML 1.1, 3.1 节；面试考点总结如下
+> 参考： PRML 1.1, 3.1 节；常见考点总结如下
 > 1. 示例：多项式拟合。
 > 2. 线性基函数。
 
