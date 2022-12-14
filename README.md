@@ -55,8 +55,6 @@
     * [12 蒙特卡罗采样 Monte Carlo Sampling](./ch12_monte_carlo_sampling/README.md)
     * [13 主成分分析 Principal Component Analysis](./ch13_principal_component_analysis/README.md)
     * [14 隐马尔科夫模型 Hidden Markov Model](./ch14_hidden_markov_model/README.md)
-    * [15 主题模型 Topic Models](./ch15_topic_models/README.md)
-    * [16 生成模型 Generative Model](./ch16_generative_model/README.md)
 
 ## 参考资料
 
