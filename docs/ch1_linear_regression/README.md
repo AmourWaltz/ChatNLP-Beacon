@@ -26,7 +26,7 @@ $$y(x, {\boldsymbol w})=w_0+w_1\cdot x + w_2\cdot x^2 + \cdot \cdot \cdot +w_k\c
 $$f(a{\boldsymbol w_1})=af({\boldsymbol w_1}),\ \ \ \ f({\boldsymbol w_1}+{\boldsymbol w_2})=f({\boldsymbol w_1})+f({\boldsymbol w_2})\tag2 $$
 其中 $ {\boldsymbol w_1}, \boldsymbol{w}_2 $ 为两组可能的参数向量。
 
-&emsp;&emsp;使用多项式函数进行曲线拟合不无道理，根据泰勒公式 (Taylor's Formula)，对于任意连续函数 $ f(x) $，如果$ f(x) $在 $ x_0 $ 处具有任意阶导数，其泰勒展开公式为
+&emsp;&emsp;使用多项式函数进行曲线拟合不无道理，根据泰勒公式 (Taylor's Formula)，对于任意连续函数 $ f(x) $，如果$ f(x) $在 $ （x_0 - t_1, x_0 + t_2） $ 内具有任意阶导数，则对于任意 $x\in(x_0 - t_1, x_0 + t_2) $ ，其泰勒展开公式为
 
 $$f(x)=f(x_0)+(x-x_0){f}'(x_0)+ (x-x_0)^2 \frac{{f}''(x_0)}{2!}+···=\sum_{n=0}^{\infty }(x-x_0)^n\frac{{f}^{(n)}(x_0)}{2!} =\sum_{n=0}^{\infty} c_nx^{n}\tag3$$
 可以简化为多项式函数的形式，对于自变量只在小范围区间上定义的函数，多项式可以近乎完美的拟合曲线；但是由于多项式往往拟合的是针对输⼊变量的全局函数，其形式也并不唯一，在输⼊空间一个区域引入新的训练数据往往可能影响所有其他区域的数据拟合结果。对此我们把输⼊空间切分成若⼲个区域，然后在每个区域⽤不同的多项式函数拟合，这种函数称做样条函数 (spline function)。
@@ -67,7 +67,7 @@ $$\phi_j(x)=\sigma(\frac {x-u_j} {s}),\sigma(a)=\frac {1} {1+\exp(-a)}\tag7$$
 > 1. 示例：多项式拟合。
 > 2. 线性基函数。
 
-#### 最大似然估计 Maximum Likelihoood Estimation
+#### 最大似然估计 Maximum Likelihood Estimation
 
 &emsp;&emsp;线性回归问题都可以通过最⼩化误差函数来解决，通常选择平方和作为误差函数，接下来就从最大似然估计 (maximum likelihood estimation, MLE) 的角度解释为什么选择最小平方 (least squares) 来解决回归问题。
 
@@ -75,10 +75,10 @@ $$\phi_j(x)=\sigma(\frac {x-u_j} {s}),\sigma(a)=\frac {1} {1+\exp(-a)}\tag7$$
 通常选择高斯分布 (Gaussian distribution) 来建模，因为实际建模的很多分布是比较接近高斯分布的。中心极限定理（central limit theorem）说明很多独立随机变量的和近似服从高斯分布，意味着在实际中，很多复杂系统都可以被成功地建模成高斯分布的噪声。在⾼斯噪声模型的假设下，我们假定给定 $\boldsymbol x^{(i)}$ 的值， 对应 $t^{(i)}$ 的值服从⾼斯分布，分布均值为 $y(\boldsymbol x^{(i)},\boldsymbol{w})$ ，此时有
 
 $$p(t^{(i)}|\boldsymbol x^{(i)}, \boldsymbol{w}, \beta) = \mathcal{N} (t^{(i)}|y(\boldsymbol x^{(i)}, \boldsymbol{w}), \beta^{-1})\tag 8 $$
-其中 $\beta$ 对应高斯分布方差的导数，很显然分布均值 $y(\boldsymbol x^{(i)}, \boldsymbol{w})$ 就是我们选取的拟合函数。即我们对 $\boldsymbol x^{(i)}$ 的预测结果 $t^{(i)}$ 加了一个均值为0，方差为 $\beta$ 的高斯噪声 $\epsilon$ ，使得 $t=y(\boldsymbol x,\boldsymbol{w})+\epsilon$ ，最终预测结果符合以上假设的概率分布。而新输入的 $\boldsymbol x^{(j)}$ 的最优预测由⽬标变量的条件均值给出，条件均值可以写为
+其中 $\beta$ 对应高斯分布方差的倒数，很显然分布均值 $y(\boldsymbol x^{(i)}, \boldsymbol{w})$ 就是我们选取的拟合函数。即我们对 $\boldsymbol x^{(i)}$ 的预测结果 $t^{(i)}$ 加了一个均值为0，方差为 $\beta$ 的高斯噪声 $\epsilon$ ，使得 $t=y(\boldsymbol x,\boldsymbol{w})+\epsilon$ ，最终预测结果符合以上假设的概率分布。而新输入的 $\boldsymbol x^{(j)}$ 的最优预测由⽬标变量的条件均值给出，条件均值可以写为
 
 $$\mathbb{E} \left [ t|\boldsymbol x  \right ] =\int t\cdot p(t|\boldsymbol x)\mathrm dt=y(\boldsymbol x,\boldsymbol{w})\tag 9$$
-为了证明假设的概率分布适用于给定数据集上的所有数据，我们需要用训练数据 $\left \{\boldsymbol{X},\boldsymbol{t} \right \}$ ，通过最⼤似然 (maximum likelihood) ⽅法，来决定参数 $\boldsymbol{w}$ 和 $\beta$ 的值。所谓最大似然估计，就是寻找能够以较高概率产生观测数据的概率模型（或似然函数），通过最⼤化数据集的真实概率分布计算固定的参数，即认为参数 $\boldsymbol{w}$ 和 $\beta$ 是定值而数据集是变量，与之相对应的最大后验估计 (maximum posterior) 则是在给定数据集的情况下最⼤化参数的概率分布，认为参数 $\boldsymbol{w}$ 和 $\beta$ 是变量而数据集是定值，这个会在后续篇幅展开讨论。此时似然函数为
+为了证明假设的概率分布适用于给定数据集上的所有数据，我们需要用训练数据 $\left \{\boldsymbol{X},\boldsymbol{t} \right \}$ ，通过最⼤似然 (maximum likelihood) ⽅法，来决定参数 $\boldsymbol{w}$ 和 $\beta$ 的值。所谓最大似然估计，就是寻找能够以较高概率产生观测数据的概率模型（或似然函数），通过最⼤化数据集的真实概率分布计算固定的参数，即认为参数 $\boldsymbol{w}$ 和 $\beta$ 是定值而数据集是变量，与之相对应的最大后验估计 (maximum a posteriori) 则是在给定数据集的情况下最⼤化参数的概率分布，认为参数 $\boldsymbol{w}$ 和 $\beta$ 是变量而数据集是定值，这个会在后续篇幅展开讨论。此时似然函数为
 
 $$p(\boldsymbol{t}|\boldsymbol{X}, \boldsymbol{w}, \beta) = \prod_{i=1}^{N}\mathcal{N} (t^{(i)}|y(\boldsymbol x^{(i)}, \boldsymbol{w}), \beta^{-1})\tag {10}$$
 为了最大化似然函数，我们会将高斯分布取对数然后替换之，得到对数似然函数
@@ -93,12 +93,12 @@ $$\frac{1}{\beta^{\star}} =\frac{1}{N} \sum_{i=1}^{N} \left \{ y(\boldsymbol x^{
 
 $$p(t^{(j)}|\boldsymbol x^{(j)},\boldsymbol w^{\star}, \beta^{\star})=\mathcal{N}(t_j|y(x_j, \boldsymbol w^{\star}),{\beta^{\star}} ^{-1})\tag {13}$$
 
-#### 最大后验估计 Maximum A Posterior
+#### 最大后验估计 Maximum A Posteriori
 
 &emsp;&emsp;这时再考虑将参数 $\boldsymbol w$ 看做服从某种概率分布的变量，同样假设为高斯噪声模型
 
 $$p(\boldsymbol w|\alpha)=\mathcal{N}(\boldsymbol w|\boldsymbol 0, \alpha^{-1}\boldsymbol{I})=(\frac {\alpha}{2\pi})^{\frac {M}{2}}\exp \left \{ -\frac{\alpha}{2} \boldsymbol {w} ^T \boldsymbol{w} \right \}\tag{14}$$
-其中 $\alpha$ 是分布方差， $M$ 是参数数量，选用0均值是因为我们通常在实际操作中将 $\boldsymbol w$ 初始化为 $\boldsymbol 0$ 。如果再将 $\boldsymbol w$ 看做给定数据集 $\left \{ \boldsymbol {X,t} \right \}$ 上的条件概率分布，可表示为 $p(\boldsymbol w| \boldsymbol{X,t})$ ，也称作 $\boldsymbol w$ 的后验概率 (posterior distribution)，与似然概率 $p(\boldsymbol t|\boldsymbol{w,X})$ 相同的是，我们总是将概率的条件项假设为定值。使⽤贝叶斯定理 (Bayes Theorem)， $\boldsymbol w$ 的后验概率正⽐于先验分布和似然函数的乘积。
+其中 $\alpha$ 是分布方差， $M$ 是参数数量，选用0均值是因为我们通常在实际操作中将 $\boldsymbol w$ 初始化为 $\boldsymbol 0$ 。如果再将 $\boldsymbol w$ 看做给定数据集 $\left \{ \boldsymbol {X,t} \right \}$ 上的条件概率分布，可表示为 $p(\boldsymbol w| \boldsymbol{X,t})$ ，也称作 $\boldsymbol w$ 的后验概率 (posteriori distribution)，与似然概率 $p(\boldsymbol t|\boldsymbol{w,X})$ 相同的是，我们总是将概率的条件项假设为定值。使⽤贝叶斯定理 (Bayes Theorem)， $\boldsymbol w$ 的后验概率正⽐于先验分布和似然函数的乘积。
 
 $$p(\boldsymbol w| \boldsymbol{X},\boldsymbol{t},\alpha,\beta)\propto p(\boldsymbol t|\boldsymbol{w},\boldsymbol{X},\beta)p(\boldsymbol w|\alpha)\tag {15}$$
 为了最大化后验概率分布确定 $\boldsymbol w$ ，同样将高斯分布公式代入并取负对数，可得最大化后验概率就是最小化下式
@@ -116,7 +116,7 @@ $$\frac{\beta}{2} \sum_{i=1}^{N} \left \{ y(\boldsymbol x^{(i)},\boldsymbol{w})-
 #### 顺序学习 Sequential Learning
 
 &emsp;&emsp;紧接上文，我们利用线性回归模型进行拟合，需要根据训练数据调节参数 $\boldsymbol{w}$ 的值，使得对于任意训练数据 $\boldsymbol{x}^{(i)}$ ，模型的输出 $y(\boldsymbol{x}^{(i)}$, $\boldsymbol{w})$ 更加接近目标值 $t^{(i)}$ ，同时最小化代价函数 $E(\boldsymbol{w})=\frac {1}{2}\sum_{i=1}^{N}[y(\boldsymbol x^{(i)},\boldsymbol{w})-t^{(i)}]^2$ 使之无限趋近于0。由于误差函数是系数 $\boldsymbol{w}$ 的二次函数（线性回归 $y(\boldsymbol{x}, \boldsymbol{w})$ 本身定义就是针对 $\boldsymbol{w}$ 的线性函数），所以其导数是关于 $\boldsymbol{w}$ 的线性函数，误差函数的最小值有唯一最优解 $\boldsymbol{w}^\star$ ，线性回归问题也可以看作是针对误差函数的优化问题。但由于求解系数 $\boldsymbol{w}$ 通常是在一整个大数据集上进行的，我们很难得到精确的 $\boldsymbol{w}^\star$ ，最直观的方法就是逐一考虑每一个数据点 $\boldsymbol{x}^{(i)}$ 来逼近 $\boldsymbol{w}^\star$ 。
-这种求解方法也称作顺序算法 (sequential algorithm)（或在线算 (on-line algorithm)），通过迭代每次只考虑⼀个数据点，模型的参数在每观测到数据点之后进⾏更新（实际上一般不会在每个点计算后都更新一次，这样效率极低且误差函数往往震荡不收敛。一般都是在小批量操作的），在迭代过程中通常梯度下降 (gradient descent) 算法来逐步优化求解 $\boldsymbol{w}^\star$ 。
+这种求解方法也称作顺序算法 (sequential algorithm)（或在线算法 (online algorithm)），通过迭代每次只考虑⼀个数据点，模型的参数在每观测到数据点之后进⾏更新（实际上一般不会在每个点计算后都更新一次，这样效率极低且误差函数往往震荡不收敛。一般都是在小批量操作的），在迭代过程中通常梯度下降 (gradient descent) 算法来逐步优化求解 $\boldsymbol{w}^\star$ 。
 
 &emsp;&emsp;为了能找到使误差函数 $E(\boldsymbol{w})$ 最小的参数 $\boldsymbol{w}$ ，我们对 $\boldsymbol{w}$ 的初值先做出一定假设（比如初始化为0），然后在利用梯度下降算法不断更新 $\boldsymbol{w}$ 使之收敛至某处可以最小化 $E(\boldsymbol{w})$ ，如下
 
@@ -136,18 +136,18 @@ $$\boldsymbol w^{(\tau+1)}=\boldsymbol w^{(\tau)}-\eta(t-\boldsymbol w^{(\tau)T}
 <img src="images/1_4_mse1.png" width="72%"/>
 </div>
 
-## 1.4 梯度下降法 Gradient Desent
+## 1.4 梯度下降法 Gradient Descent
 
 > 参考： PRML 3.1 节；面试考点总结如下
 > 1. 示例：多项式拟合。
 > 2. 线性基函数。
 
-#### 批量梯度下降 Gradient Desent
+#### 批量梯度下降 Gradient Descent
 
 &emsp;&emsp;梯度下降算法使⽤梯度信息，权值参数 $\boldsymbol{w}$ 通过迭代的方式，每次在误差函数 $E(\boldsymbol{w})$ 关于 $\boldsymbol{w}$ 负梯度⽅向上通过⼀次⼩的移动进行更新。误差函数是关于训练集定义的，因此计算 $\nabla E(\boldsymbol{w})$，每⼀步都需要处理整个训练集，也称作批量梯度下降 (batch gradient descent)，如下
 
 $$\boldsymbol w^{(\tau+1)}=\boldsymbol w^{(\tau)}-\eta \frac{1}{N}\sum_{i=1}^{N}(t^{(i)}-\boldsymbol w^{(\tau)T}\boldsymbol x^{(i)})\tag{19}$$
-此处假设 $y(\boldsymbol w, \boldsymbol x)=\boldsymbol w^T\boldsymbol x$。需要注意的是，虽然梯度下降通常可能会受到局部极小值的影响，但我们在此处针对的优化问题 $E(\boldsymbol{w})$ 是一个关于 $\boldsymbol{w}$ 的二次凸函数 (convex quadratic function)，因此它只存在一个全局极小值 (global minimum) 且没有局部最小 (local minimum)。如下图所示，椭圆表示二次型函数轮廓的轮廓采样。蓝色轨迹表示参数通过梯度下降算法的连续过程
+此处假设 $y(\boldsymbol w, \boldsymbol x)=\boldsymbol w^T\boldsymbol x$。需要注意的是，虽然梯度下降通常可能会受到局部极小值的影响，但我们在此处针对的优化问题 $E(\boldsymbol{w})$ 是一个关于 $\boldsymbol{w}$ 的二次凸函数 (convex quadratic function)，因此它只存在一个局部最小值 (local minimum) 即全局极小值 (global minimum) 。如下图所示，椭圆表示二次型函数轮廓的轮廓采样。蓝色轨迹表示参数通过梯度下降算法的连续过程
 
 <div align=center>
 <img src="images/1_5_gd1.png" width="75%"/>
