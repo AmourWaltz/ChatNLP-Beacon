@@ -1,8 +1,8 @@
-# 12 蒙特卡罗采样 Monte Carlo Sampling
+# 采样方法 Sampling Method
 
 &emsp;&emsp;对于⼤多数实际应⽤中的概率模型来说，精确推断是不可⾏的，因此不得不借助于某种形式的近似。上一章讨论了变分推断的近似⽅法，本章就考虑基于数值采样的近似推断⽅法，也被称为蒙特卡罗采样方法 (Monte Carlo Sampling Method)。
 
-&emsp;&emsp;在贝叶斯神经网络一节中，我们提到过针对连续变量积分通过蒙特卡罗采样离散化的处理
+&emsp;&emsp;在贝叶斯神经网络中，我们提到过针对连续变量积分通过蒙特卡罗采样离散化的处理
 
 $$\int \ln p(\mathcal D|\boldsymbol w)q(\boldsymbol w)\mathrm d\boldsymbol w\approx\frac{1}{K}\sum_{k=1}^{K}\ln p(\mathcal D|\boldsymbol w_k)\tag1$$
 
@@ -28,7 +28,7 @@ $$\mathrm {var}[\hat f]=\frac{1}{L}\mathbb E[(f-\mathbb E[f])^2]\tag4$$
 
 &emsp;&emsp;然⽽样本 $\left \{ \boldsymbol z^{(l)} \right \}$ 可能不是相互独⽴的，因此有效样本数量可能远远⼩于表⾯上的样本数量。在上图中，如果 $f(\boldsymbol z)$ 在 $p(\boldsymbol z)$ 较⼤的区域中的值较⼩，而在 $p(\boldsymbol z)$ 较小的区域中的取值较大，那么期望就可能由 $p(\boldsymbol z)$ ⼩概率的区域控制，为了达到⾜够精度，需要相对较⼤的样本数量。
 
-## 12.1 基本采样方法 Basic Sampling Method
+## 6.1 蒙特卡罗采样 Monte Carlo Sampling
 
 &emsp;&emsp;本节研究从⼀个给定的概率分布中⽣成随机样本的⼀些⽅法。由于样本是通过计算机算法⽣成的，因此这些样本实际上是伪随机数 (pseudo-random numbers)，它们通过计算的⽅法确定。我们假定算法⽣成的是 $(0,1)$ 之间均匀分布的伪随机数，这对于很多编程语言很容易实现。
 

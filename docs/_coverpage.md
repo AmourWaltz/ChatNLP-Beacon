@@ -1,9 +1,8 @@
 <!-- _coverpage.md -->
 
-# 深入理解 Pattern Recognition and Machine Learning
+#  ML&NLP Beacons
 
-> 📚 基于 Bishop《PRML》的学习笔记和导读教程。
-
+> 📚 PRML & DL, NLP Notes, Tutorials and Blogs. 🌠
 
 
 [GitHub](https://github.com/AmourWaltz/Dive-into-PRML/)

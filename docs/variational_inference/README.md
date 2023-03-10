@@ -1,4 +1,8 @@
-# 11 变分推断 Variational Inference
+# 5 变分法 Variational Inference
+
+## 5.1 变分法的物理推导
+
+## 5.2 变分近似推断
 
 &emsp;&emsp;概率模型的应⽤中⼀个重要任务是在给定观测数据变量 $\boldsymbol X$ 的条件下，计算潜在变量 $\boldsymbol Z$ 的后验概率分布 $p(\boldsymbol Z|\boldsymbol X)$ 以及这个概率分布的期望，模型也可能是⼀个贝叶斯模型，其中任何未知参数都有⼀个先验概率分布，并且被整合到了潜在变量 $\boldsymbol Z$ 中。在贝叶斯神经网络一节中，使用变分法的思路就是，把数据集 $\mathcal D$ 看做观测数据，模型参数 $\boldsymbol w$ 看做潜在变量，然后计算参数的后验概率分布 $p(\boldsymbol w|\mathcal D)$。之所以要这样做，是因为对于实际应⽤中的许多模型来说，计算后验概率分布或者它的期望是不可⾏的，贝叶斯神经网络引入变分法就是因为，神经网络中的非线性变换使得似然分布的指数项不是均值参数的二次型，后验概率形式复杂，不能解析地求出，其他原因也有可能是潜在空间的维度太⾼不便于计算。
 
@@ -15,8 +19,6 @@ $$\mathrm {KL}(q||p)=-\int q(\boldsymbol Z)\ln \left \{ \frac{p(\boldsymbol Z|\b
 &emsp;&emsp;于是我们转⽽考虑概率分布 $q(\boldsymbol Z)$ 的⼀个受限制的类别，然后寻找这个类别中使得 KL 散度达到最⼩值的概率分布。先充分限制 $q(\boldsymbol Z)$ 可以取得的概率分布的范围，使得这个范围中的所有概率分布都是可处理的概率分布。同时还要保证这个范围充分广泛灵活，从⽽能够提供对真实后验概率分布的⼀个⾜够好的近似。施加限制条件的唯⼀⽬的是为了计算⽅便，并且在这个限制条件下，应使⽤尽可能丰富的近似概率分布。特别地，对于⾼度灵活的概率分布来说，没有 “过拟合” 现象，使⽤灵活的近似仅仅使得我们更好地近似真实的后验概率分布。
 
 &emsp;&emsp;限制近似概率分布的范围的⼀种⽅法是使⽤参数概率分布 $q(\boldsymbol Z|\boldsymbol \theta)$，它由参数集合 $\boldsymbol \theta$ 控制。这样下界 $\mathcal L(q)$ 变成了 $\boldsymbol \theta$ 的函数，例如在贝叶斯神经网络一节中，我们假设 $q(\boldsymbol Z)$ 服从高斯分布，那么参数集合 $\boldsymbol \theta$ 就是高斯分布的均值和方差。
-
-## 11.1 分解近似 Factorized Approximations
 
 &emsp;&emsp;这里考虑另一种分解近似 (factorized approximations) 方法，我们直接限制概率分布 $q(\boldsymbol Z)$ 的范围，将 $\boldsymbol Z$ 的元素划分成 M 个互不相交的组，记作 $\boldsymbol Z_i$，其中 $i=1,\dots,M$，然后假定 $q$ 分布关于这些分组可以进行分解，即
 

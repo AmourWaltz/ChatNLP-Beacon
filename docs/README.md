@@ -1,60 +1,71 @@
-# 深入理解 PRML & Deep Learning
+# ML&NLP Beacons
 </br>
 
-&emsp;&emsp;本项目是基于 Bishop 的《Pattern Recognition and Machine Learning》（以下简称 PRML）和深度学习花书《Deep Learning》的学习笔记和导读教程，也是作者学习过程中对机器学习和深度学习作出的系统性总结资料。
+&emsp;&emsp;本项目是针对机器学习和自然语言处理所做的学习笔记和专栏文章。笔者是一名在读博士生，研究方向为预训练模型和对话系统，平时热衷写作分享，在接触 Datawhale 后萌生了将学习笔记整理为开源项目的想法，期望能找到更多志同道合的伙伴交流进步。机器学习部分包括“圣经”《Pattern Recognition and Machine Learning》和深度学习花书《Deep Learning》的学习笔记，整理了书中精华以及对科研更重要的内容作深入理解，而自然语言处理则是子方向的小综述，帮助其他方向的同学快速了解。
 
-&emsp;&emsp;机器学习是当下最热门的方向之一，很多从事相关工作研究的伙伴都希望能在该领域更进一步，而对基础知识的掌握程度往往决定了个人能企及的成就上限，正所谓水之积也不厚，则其负大舟也无力。于是我选择了素有机器学习和深度学习领域“圣经”之称的 PRML 和 Deep Learning 作为主要资料，并坚持进行学习笔记的写作整理，后来逐渐决定做一个基于 ML&DL 的开源项目。
-本项目取名 Dive into ML&DL，以一个初学者的角度，深入浅出，构建系统性的知识框架。一方面 PRML 毫无疑问是一本值得深究的经典之作；另一方面，本项目也不局限于 PRML 和 DL 这两本书，会引入一些近年来相关的方法作补充，努力打造一个新的机器学习教程。
+&emsp;&emsp;在科研过程中，面对浩渺如烟的知识云海，我深感“吾生而有涯，而知也无涯，以有涯随无涯，殆矣”，将项目取名为 ML&NLP Beacons，旨在从茫茫学海中过滤出最精华最实用的部分，如灯塔般指引学海中的一叶扁舟，以期让有限的研究生学习事半功倍，由浅入深，快速了解上手后再图精益求精，不失为一条高效的学习路径。
 
-&emsp;&emsp;项目计划分为试行版，完整版，发行版三个版本，具体可参见[项目实施](./preface/experience.md)，先以 PRML 和 DL 学习笔记的形式呈现，而后精益求精，结合其他资料融会贯通，自成体系，做出一份完整的教程，作为我学术生涯的一项重要成果而收官。
-行远自迩，笃行不怠，希望自己能把这份初心坚持到底，有所建树，同时也能为中国开源事业贡献绵薄之力。
+&emsp;&emsp;欢迎对本项目以及机器学习和自然语言处理感兴趣的同学加入，可以对现有章节进行斧正交流，也可以编写自己感兴趣的内容，欢迎联系微信：NightWalzer。
+
+&emsp;&emsp;(注：该项目原是笔者在知乎写作 Bishop《Pattern Recognition and Machine Learning》的笔记专栏，接触 Datawhale 后尝试扩展的开源项目，但不久前恰好看到一份 PRML 笔记教程的开源资料，原来微博早有人在 2015 年就组织了 PRML 的读书会，做了和笔者想法相同的学习笔记，并在不久前竣工后将相关中文译本，官方代码，课程视频，笔记教程悉数发布，[链接在此](https://mp.weixin.qq.com/s/NQRU_y9SaRXlB53zvgeGjg)。笔者阅读后大受震撼，确实是非常优秀实用的学习资料，完整详细，深入浅出，非常感谢贡献者们的杰出工作，于我而言再重复前人工作不过画蛇添足，因此将原项目更新。)
 
 ## 参考目录
 
-* **<font size=4>前言 Preface</font>**
-    * [写作初衷 Original Intention](./preface/intention.md)
-    * [项目实施 Project Implementation](./preface/experience.md)
+<!-- * **<font size=4>前言 Preface</font>**
+    * [项目初衷 Project Intention](./preface/intention.md) -->
 
-* **<font size=4>机器学习篇 Machine Learning</font>**
-    * [1 线性回归 Linear Regression](./ch1_linear_regression/README.md)
-        * [1.1 线性基函数模型 Linear Basis Function Model](./ch1_linear_regression/1.1_linear_basis_function_model.md) </br>
-        * [1.2 最大似然估计 Maximum Likelihoood Estimation](./ch1_linear_regression/1.2_maximum_likelihoood_estimation.md) </br>
-        * [1.3 最小均方差 Minimum Square Error](./ch1_linear_regression/1.3_minimum_square_error.md) </br>
-        * [1.4 梯度下降法 Gradient Desent](./ch1_linear_regression/1.4_gradient_desent.md) </br>
-        * [1.5 解析法 Analytic Method](./ch1_linear_regression/1.5_analytic_method.md) </br>
-    * [2 线性分类 Linear Classification](./ch2_linear_classification/README.md)
-        * [2.1 线性判别分析 Linear Discriminate Analysis](./ch2_linear_classification/2.1_linear_discriminate_analysis.md) </br>
-        * [2.2 Fisher分类器 Fisher Classifier](./ch2_linear_classification/2.2_fisher_classifier.md) </br>
-        * [2.3 感知器算法 Perceptron Algorithm](./ch2_linear_classification/2.3_perceptron_algorithm.md) </br>
-        * [2.4 判别式 Logistic 回归 Discrminate Logistic Regression](./ch2_linear_classification/2.4_discriminate_logistic_regression.md) </br>
-        * [2.5 生成式 Logistic 回归 Generative Logistic Regression](./ch2_linear_classification/2.5_generative_logistic_regression.md) </br>
-        * [2.6 广义线性模型 Generalized Linear Model](./ch2_linear_classification/2.6_generalized_linear_model.md) </br>
-    * [3 概率分布 Probability Distribution](./ch5_probability_distribution/README.md)
-        * [3.1 贝叶斯概率 Bayes Probability](./ch5_probability_distribution/5.1_bayes_probability.md)
-        * [3.2 Beta分布 Beta Distribution](./ch5_probability_distribution/5.2_beta_distribution.md)
-        * [3.3 狄利克雷分布 Dirichlet Distribution](./ch5_probability_distribution/5.3_dirichlet_distribution.md)
-        * [3.4 高斯分布 Gaussian Distribution](./ch5_probability_distribution/5.4_gaussian_distribution.md)
-    * [4 神经网络 Neural Networks](./ch6_neural_networks/README.md)
-    * [5 核方法 Kernel Method](./ch7_kernel_method/README.md)
-    * [6 支持向量机 Support Vector Machine](./ch8_support_vector_machine/README.md)
-    * [7 图模型 Graph Models](./ch9_graph_model/README.md)
-    * [8 期望最大化算法 EM Algorithm](./ch10_em_algorithm/README.md)
-    * [9 变分推断 Variational Inference](./ch11_variational_inference/README.md)
-    * [10 蒙特卡罗采样 Monte Carlo Sampling](./ch12_monte_carlo_sampling/README.md)
-    * [11 主成分分析 Principal Component Analysis](./ch13_principal_component_analysis/README.md)
-    * [12 隐马尔科夫模型 Hidden Markov Model](./ch14_hidden_markov_model/README.md)
+* **<font size=4>机器学习 Machine Learning</font>**
+    * [1 线性模型 Linear Regression](./linear_model/README.md)
+        * [1.1 线性基函数模型 Linear Basis Function Model](./linear_model/README.md)
+        * [1.2 线性回归模型 Maximum Likelihoood Estimation](./linear_model/README.md)
+            * [最大似然估计，最小均方差，解析法](./linear_model/README.md)
+        * [1.3 线性分类模型 Linear Discriminate Analysis](./linear_model/README.md)
+            * [Fisher 判别器，线性判别模型，感知器算法](./linear_model/README.md)
+        * [1.4 判别式与生成式模型 Discrminate and Generative Model](./linear_model/README.md)
+        * [1.5 广义线性模型 Generalized Linear Model](./linear_model/README.md)
+    * [2 概率分布 Probability Distribution](./probability_distribution/README.md)
+        * [2.1 贝叶斯概率 Bayes Probability](./probability_distribution/README.md)
+        * [2.2 Beta分布 Beta Distribution](./probability_distribution/README.md)
+        * [2.3 狄利克雷分布 Dirichlet Distribution](./probability_distribution/README.md)
+        * [2.4 高斯分布 Gaussian Distribution](./probability_distribution/README.md)
+    * [3 核方法 Kernel Method](./kernel_method/README.md)
+        * [3.1 核函数 Kernel Function](./kernel_method/README.md)
+        * [3.2 高斯过程 Gaussian Distribution](./kernel_method/README.md)
+        * [3.3 支持向量机 Support Vector Machine](./kernel_method/README.md)
+    * [4 期望最大化 Expectation Maximum](./expectation_maximum/README.md)
+        * [4.1 K均值聚类 K-means Clustering](./expectation_maximum/README.md)
+        * [4.2 EM算法 EM Algorithm](./expectation_maximum/README.md)
+    * [5 变分法 Variational Inference](./variational_inference/README.md)
+        * [5.1 变分法的物理推导 Inference of Variational Method](./variational_inference/README.md)
+        * [5.2 变分近似推断 Variational Approximation](./variational_inference/README.md)
+    * [6 采样方法 Sampling Method](./monte_carlo_sampling/README.md)
+        * [6.1 蒙特卡罗采样 Monte Carlo Sampling](./monte_carlo_sampling/README.md)
   
-* **<font size=4>深度学习篇 Deep Learning</font>**
-    * [1 学习理论 Learning Theory](./ch3_learning_theory/README.md)
-        * [1.1 过拟合 Overfitting](./ch3_learning_theory/3.1_overfitting.md)
-        * [1.2 正则化 Regularization](./ch3_learning_theory/3.2_regularization.md)
-        * [1.3 模型特征选择 Model Feature Selection](./ch3_learning_theory/3.3_mode_feature_selection.md)
-        * [1.4 偏差与方差 Bias and Variance](./ch3_learning_theory/3.4_bias_and_variance.md)
-    * [2 信息论 Information Theory](./ch4_information_theory/README.md)
-        * [2.1 信息熵 Information Entropy](./ch4_information_theory/4.1_information_entropy.md)
-        * [2.2 熵的物理意义 Entropy in Physics](./ch4_information_theory/4.2_entropy_in_physics.md)
-        * [2.3 相对熵 Relative Entropy](./ch4_information_theory/4.3_relative_entropy.md)
-        * [2.4 互信息 Mutual Information](./ch4_information_theory/4.4_mutual_information.md)
+* **<font size=4>深度学习 Deep Learning</font>**
+    * [1 学习理论 Learning Theory](./learning_theory/README.md)
+        * [1.1 过拟合与正则化 Overfitting](./learning_theory/README.md)
+        * [1.2 模型特征选择 Model Feature Selection](./learning_theory/README.md)
+        * [1.3 偏差与方差 Bias and Variance](./learning_theory/README.md)
+    * [2 信息论 Information Theory](./information_theory/README.md)
+      * [2.1 信息熵 Information Entropy](./information_theory/README.md)
+      * [2.2 熵的物理意义 Entropy in Physics](./information_theory/README.md)
+      * [2.3 相对熵和互信息 Relative Entropy and Mutual Information](./information_theory/README.md)
+    * [3 神经网络 Neural Networks](./neural_networks/README.md)
+      * [3.1 深度前馈神经网络 Deep Feed-forward Neural Networks](./neural_networks/README.md)
+      * [3.2 隐藏单元 Hidden Unit](./neural_networks/README.md)
+      * [3.3 反向传播 Back Propagation](./neural_networks/README.md)
+    * [4 模型优化 Model Optimization](./optimization/README.md)
+        * [4.1 梯度下降法 Gradient Desent](./optimization/README.md) </br>
+    * [5 大规模深度学习 Large-scale Deep Learning](./large_scale_dl/README.md)
+
+* **<font size=4>自然语言处理 Natural Language Processing</font>**
+    * [1 预训练模型 Pretrained Models](./pretrained_model/README.md)
+    * [2 对话系统 Dialogue Systems](./dialogue_system/README.md)
+        * [2.1 基于知识的对话大模型](./dialogue_system/README.md)
+        * [2.2 对话大模型中的事实错误](./dialogue_system/README.md)
+    * [3 对话大模型实现 Dialogue Models](./dialogue_model/README.md)
+        * [3.1 基于 GPT2 搭建对话生成模型](./dialogue_model/README.md)
+        * [3.2 基于 BERT 的对话生成评估](./dialogue_model/README.md)
 
 ## 参考资料
 
@@ -85,13 +96,13 @@
 <tbody>
   <tr>
     <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://amourwaltz.github.io">薛博阳</a></span></td>
-    <td><span style="font-weight:normal;font-style:normal;text-decoration:none">项目负责人，香港中文大学博士在读 </td>
-    <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://github.com/AmourWaltz">Github</a>, <a href="https://www.zhihu.com/people/yi-ran-chao-shi-dai">知乎</a> </td>
+    <td><span style="font-weight:normal;font-style:normal;text-decoration:none">项目负责人，香港中文大学博士在读 </span></td>
+    <td><span style="font-weight:normal;font-style:normal;text-decoration:none"><a href="https://github.com/AmourWaltz">Github</a>, <a href="https://www.zhihu.com/people/yi-ran-chao-shi-dai">知乎</a> </span></td>
   </tr>
 </tbody>
 </table>
 
-&emsp;&emsp;由于项目规划工程量较大，时间线预计较久，我平日精力能力有限，非常期望能遇到对此项目以及 PRML 感兴趣或者正在学习的伙伴，希望你能参与部分章节的编辑，或对完成的内容进行检查斧正，或对项目提出合理建议，有意者欢迎联系。
+&emsp;&emsp;由于项目规划工程量较大，时间线预计较久，我平日精力能力有限，非常期望能遇到对此项目以及 PRML, DL, NLP 感兴趣或者正在学习的伙伴，希望你能参与部分章节的编辑，或对完成的内容进行检查斧正，或对项目提出合理建议，有意者欢迎联系。
 
 ## 关注我们
 

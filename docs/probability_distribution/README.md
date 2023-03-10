@@ -1,8 +1,8 @@
-# 5 概率分布 Probability Distribution
+# 2 概率分布 Probability Distribution
 
 &emsp;&emsp;不确定性 (uncertainty) 是机器学习中一个重要概念，它一般由测量误差，温度漂移等因素引起，也可以由采样数据的有限性引起，在实际应用中有重要的指导意义。这时候就需要概率论的知识来描述模型方法的不确定性，从而提供了⼀个合理的框架来量化计算，同时需要概率分布来描述数据的分布，概率论也因此成了模式识别的⼀个中⼼基础。本文先介绍一些概率论的重要基础概念引入话题，再接着讲述两种重要的分布。
 
-## 5.1 概率密度 Probability Density
+#### 概率密度 Probability Density
 
 &emsp;&emsp;虽然生活中我们更多使用离散概率描述事件，但是对于机器学习的推导，更多情况下需要分析的对象是连续变量，这时候就需要引出概率密度 (probability density)。如果⼀个实值变量 $x$ 的概率落在区间 $(x+\delta x)$ 的概率由 $p(x)\delta x$ 给出 $(\delta x\rightarrow0)$ ，那么 $p(x)$ 叫做 $x$ 的概率密度。$x$ 位于区间 $(a,b)$ 的概率为：
 
@@ -53,7 +53,7 @@ $$\mathrm{cov}[x,y]=\mathbb E\left [ \left \{ x-\mathbb E[x] \right \} \left \{ 
 
 $$\mathrm{cov}[\boldsymbol x,\boldsymbol y]=\mathbb E\left [ \left \{ \boldsymbol x-\mathbb E[\boldsymbol x] \right \} \left \{ \boldsymbol y^T-\mathbb E[\boldsymbol y^T] \right \} \right ]=\mathbb E_{\boldsymbol x,\boldsymbol y}[\boldsymbol x\boldsymbol y^T]-\mathbb E[\boldsymbol x]\mathbb E[\boldsymbol y^T]\tag{10}$$
 
-## 5.2 贝叶斯概率 Bayes Theorem
+## 2.1 贝叶斯概率 Bayes Theorem
 
 &emsp;&emsp;在前几篇文章的最大似然估计中，我们对模型参数 $\boldsymbol w$ 进⾏推断时，在观察到数据之前，我们首先可以有⼀些关于参数 $\boldsymbol w$ 的假设，这以先验概率 $p(\boldsymbol w)$ 的形式给出；根据 $\boldsymbol w$ 表达预测目标数据 $\mathcal D$ 可以通过条件概率 $p(\mathcal D|\boldsymbol w)$ 表达，贝叶斯定理为
 
@@ -75,7 +75,7 @@ $$p(\mathcal D)=\int p(\mathcal D|\boldsymbol w)p(\boldsymbol w)\mathrm d\boldsy
 
 &emsp;&emsp;这时候我们需要引入共轭先验 (conjugate prior)，它使后验概率分布的函数形式与先验概率相同，从而使贝叶斯分析得到极⼤的简化。例如，伯努利分布参数的共轭先验叫做 Beta 分布，多项式分布参数的共轭先验叫做狄利克雷分布 (Dirichlet distribution)，⾼斯分布均值的共轭先验是另⼀个⾼斯分布。关于伯努利分布等不再赘述，本文重点讨论这些共轭先验分布。
 
-## 5.3 Beta 分布 Beta Distribution
+## 2.2 Beta 分布 Beta Distribution
 
 &emsp;&emsp;首先设定二元随机变量 $x\in\left \{ 0,1 \right \}$，$x=1$ 的概率被记作参数 $\mu$，$x$ 的伯努利概率分布记作 $\mathrm {Bern}(x|\mu)=\mu^x(1-\mu)^{1-x}$，均值和方差分别为 $\mathbb E[x]=\mu,\mathrm {var}[x]=\mu(1-\mu)$，伯努利分布的参数 $\mu$ 的最⼤似然解也是数据集 $x=1$ 所占的⽐例，依旧是通过取负对数然后求到的方法求解。
 
@@ -129,7 +129,7 @@ $$\mathrm{var}_{\boldsymbol \theta}[\boldsymbol \theta]=\mathbb E_{\mathcal D}[\
 
 &emsp;&emsp;左侧项是 $\boldsymbol \theta$ 的先验⽅差。右侧第⼀项是 $\boldsymbol \theta$ 的平均后验⽅差，第⼆项是 $\boldsymbol \theta$ 的后验均值的⽅差。这个结果表明，平均来看 $\boldsymbol \theta$ 的后验⽅差⼩于先验⽅差，后验均值的⽅差越⼤，这个⽅差的减⼩就越⼤，当然这个结论也是在平均的情况下成立。
 
-## 5.4 狄利克雷分布 Dirichlet Distribution
+## 2.3 狄利克雷分布 Dirichlet Distribution
 
 &emsp;&emsp;二项分布是描述只有两种取值的变量的概率分布，实际中我们更多遇到多种可能取值的离散变量，我们采用 one-hot 编码方式，输入向量 $\boldsymbol x$ 在 $K=6$ 个类别中属于类别 $C_3$ 时就可以表示为 $(0,0,1,0,0,0)^T$，对应 $x_3=1$ 的情况。如果我们⽤参数 $\mu_k$ 表示 $x_k=1$ 的概率，那么 $\boldsymbol x$ 的分布就是
 
@@ -174,7 +174,7 @@ $$p(\boldsymbol \mu|\mathcal D,\boldsymbol \alpha)\propto p(\mathcal D|\boldsymb
 $$p(\boldsymbol \mu|\mathcal D,\boldsymbol \alpha)=\mathrm {Dir}(\boldsymbol \mu|\boldsymbol \alpha+\boldsymbol m)=\frac{\Gamma(\alpha_0+N)}{\prod_{k=1}^{K}\Gamma(\alpha_k+m_k)}\prod_{k=1}^{K}\mu_k^{\alpha_k+m_k-1}\tag{32}$$
 其中，$\boldsymbol m=(m_1,...,m_K)^T$。 与⼆项分布的先验的 Beta 分布相同，我们可以把狄利克雷分布的参数 $\alpha_k$ 看成 $x_k=1$ 时的有效观测数。
 
-## 5.5 高斯分布 Gaussian Distribution
+## 2.4 高斯分布 Gaussian Distribution
 
 &emsp;&emsp;⾼斯分布，也称正态分布，是连续随机变量的模型中应用最广泛的分布。在第一篇文章就简单讨论过一元高斯分布的性质，本文重点讨论多元高斯分布，对于 $D$ 维向量 $\boldsymbol x$，其多元高斯分布形式是
 
@@ -368,7 +368,7 @@ $$p(\lambda|\boldsymbol X)\propto\lambda^{a_0-1}\lambda^{\frac{N}{2}}\exp\left \
 
 &emsp;&emsp;我们可以把它看成形式为 $\mathrm{Gam}(\lambda|a_N,b_N)$ 的 Gamma 分布，其中 $a_N=a_0+\frac{N}{2}$，$b_N=b_0+\frac{1}{2}\sum_{n=1}^{N}(x_n-\mu)^2=b_0+\frac{N}{2}\sigma^2_{ML}$，其中 $\sigma^2_{ML}$ 是⽅差的最⼤似然估计。我们看到观测 $N$ 个数据点的效果是把系数 $a$ 的值增加 $2N$。因此我们可以把先验分布中的参数 $a_0$ 看成 $2a_0$ 个 “有效” 先验观测。类似地，$N$ 个数据点对参数 $b$ 贡献了 $\frac{N}{2}\sigma^2_{ML}$，其中 $\sigma^2_{ML}$ 是⽅差，同样可以把先验分布中的 $b_0$ 看成 “有效” 先验观测。对于指数族分布来说，把共轭先验看成有效假想数据点是⼀个很通⽤的思想。
 
-## 5.6 混合高斯模型 Mixture of Gaussians
+#### 混合高斯模型 Mixture of Gaussians
 
 &emsp;&emsp;虽然⾼斯分布有⼀些重要的分析性质，但是当它遇到实际数据集时，也会有巨⼤的局限性。因为高斯分布是单峰的，而实际情况往往有很多是多峰分布，可以通过将基本的概率分布进⾏线性组合，这样的叠加⽅法被称为混合模型 (mixture distributions)。⾼斯分布的线性组合可以给出相当复杂的概率密度形式，通过使⽤⾜够多的⾼斯分布，并且调节它们的均值和⽅差以及线性组合的系数，⼏乎所有的连续概率密度都能够以任意的精度近似。
 
