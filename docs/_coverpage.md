@@ -1,9 +1,9 @@
 <!-- _coverpage.md -->
 
-#  ML&NLP Beacons
+#  ChatNLP Beacon
 
-> 📚 PRML & DL, NLP Notes, Tutorials and Blogs. 🌠
+> 🌠 A Project for Conversational AI; Rebuild Babel Tower. 🗼
 
 
-[GitHub](https://github.com/AmourWaltz/Dive-into-PRML/)
+[GitHub](https://github.com/AmourWaltz/ChatNLP-Beacon)
 [Get Started](/README.md)

@@ -1,20 +1,21 @@
 
-* **机器学习 Machine Learing**
-    * [线性模型 Linear Models](././linear_model/README.md)
-    * [概率分布 Probability Distribution](./probability_distribution/README.md)
-    * [核方法 Kernel Method](./kernel_method/README.md)
-    * [期望最大化 Expectation Maximum](./expectation_maximum/README.md)
-    * [变分法 Variational Inference](./variational_inference/README.md)
-    * [采样方法 Sampling Method](./monte_carlo_sampling/README.md)
+* **深度学习基础 Deep Learning Basis**
+    * [自然语言与信息论 Information Theory](./1.1_nlp_info/README.md)
+    * [深度学习模型 Deep Learning Models](./1.2_dl_models/README.md)
+    * [预训练大模型 Model Regularization](./1.3_ptms/README.md)
+    * [大规模深度学习 Large-scale Deep Learning](./1.4_large_dl/README.md)
 
-* **深度学习 Deep Learning**
-    * [学习理论 Learning Theory](./learning_theory/README.md)
-    * [信息论 Information Theory](./information_theory/README.md)
-    * [神经网络 Neural Networks](./neural_networks/README.md)
-    * [模型优化 Model Optimization](./optimization/README.md)
-    * [大规模深度学习 Large-scale Deep Learning](./large_scale_dl/README.md)
-  
-* **自然语言处理 Natural Language Processing**
-    * [预训练模型 Pretrained Models](./pretrained_model/README.md)
-    * [对话系统 Dialogue Systems](./dialogue_system/README.md)
-    * [对话大模型实现 Dialogue Models](./dialogue_model/README.md)
+* **对话系统 Dialogue System**
+    * [对话系统概述 Pretrained Models](./2.1_dial_intro/README.md)
+    * [任务型对话和开放域对话 Task-Oriented and Open-Domain Dialogues](./2.2_task_open/README.md)
+    * [知识对话和人设对话 Knowledge-Grounded and Persona Dialogues](./2.3_klg_per/README.md)
+    * [对话系统研究挑战 Research Challenges for Dialogue System](./2.4_dial_dir/README.md)
+    * [对话系统评估 Dialogue Evaluations](./2.5_dial_eval/README.md)
+    * [对话数据集 Dialogue Datasets](./2.6_dial_data/README.md)
+
+* **对话大模型实现 Dialogue Implementation**
+    * [基于 GPT2 的对话生成模型 GPT-2 based Dialogue Generation](./3.1_dial_gpt2/README.md)
+    * [基于 BERT 的对话生成评估 BERT based Evaluation for Dialogue Generation](./3.2_dial_bert/README.md)
+
+* **对话系统应用 Dialogue Applications**
+    * [趣味角色对话：丰富的个性化人设 Character AI](./4.1_character_ai/README.md)
