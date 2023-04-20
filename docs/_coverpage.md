@@ -2,7 +2,7 @@
 
 #  ChatNLP Beacon
 
-> 🌠 A Project for Conversational AI; Rebuild Babel Tower. 🗼
+> 🌠 A Project for Conversational AI and NLP; Rebuild Babel Tower. 🗼
 
 
 [GitHub](https://github.com/AmourWaltz/ChatNLP-Beacon)

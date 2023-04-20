@@ -1,6 +1,6 @@
 
 * **深度学习基础 Deep Learning Basis**
-    * [自然语言与信息论 Information Theory](./1.1_nlp_info/README.md)
+    * [自然语言与信息论 Natural Language and Information Theory](./1.1_nlp_info/README.md)
     * [深度学习模型 Deep Learning Models](./1.2_dl_models/README.md)
     * [预训练大模型 Model Regularization](./1.3_ptms/README.md)
     * [大规模深度学习 Large-scale Deep Learning](./1.4_large_dl/README.md)
@@ -19,3 +19,7 @@
 
 * **对话系统应用 Dialogue Applications**
     * [趣味角色对话：丰富的个性化人设 Character AI](./4.1_character_ai/README.md)
+
+* **附录 Appendix**
+    * [参考文献 Reference](./5.1_refer/README.md)
+    * [数学推导 Mathematical Derivation](./5.2_math/README.md)

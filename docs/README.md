@@ -14,10 +14,7 @@
 * **<font size=4>深度学习基础 Deep Learning Basis</font>**
     * [1 自然语言与信息论 Information Theory](./1.1_nlp_info/README.md)
     * [2 深度学习模型 Deep Learning Models](./1.2_dl_models/README.md)
-      * [2.1 深度神经网络 Deep Neural Networks](./1.2_dl_models/README.md)
-      * [2.2 优化方法 Optimization Methods](./1.2_dl_models/README.md)
-      * [2.3 模型泛化 Model Generalization](./1.2_dl_models/README.md)
-    * [3 预训练大模型 Model Regularization](./1.3_ptms/README.md)
+    * [3 预训练模型 Model Regularization](./1.3_ptms/README.md)
     * [4 大规模深度学习 Large-scale Deep Learning](./1.4_large_dl/README.md)
 
 * **<font size=4>对话系统 Dialogue System</font>**
@@ -35,6 +32,9 @@
 * **<font size=4>对话系统应用 Dialogue Applications</font>**
     * [1 趣味角色对话：丰富的个性化人设 Character AI](./4.1_character_ai/README.md)
 
+* **<font size=4>附录 Appendix</font>**
+    * [1 参考文献 Reference](./5.1_refer/README.md)
+    * [2 数学推导 Mathematical Derivation](./5.2_math/README.md)
 
 ## 贡献名单
 
